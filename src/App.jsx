@@ -25,10 +25,13 @@ function App() {
         <button className='inline-flex m-20 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg' onClick={fetchRandomBlogPost}>Click Me</button> <br />
 
       </div>
+      <marquee behavior="" direction="">
+        <p className='text-center font-bold my-3 text-2xl'>Joke API It can generate random joke</p>
+        
+      </marquee>
       <div className="card mx-auto">
         <h4>
-        <b className='text-center mx-auto'>Joke API</b>
-        <p className='text-center font-medium text-lg p-5 border border-gray-500 shadow-lg rounded-lg text-xl font-bold text-white font-serif'>{URL}</p>
+        <p className='text-center font-medium text-lg p-5 shadow-lg rounded-lg text-xl font-bold text-white font-serif'>{URL}</p>
         </h4>
       </div>
     </>

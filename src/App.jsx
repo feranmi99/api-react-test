@@ -6,12 +6,16 @@ import axios from 'axios'
 
 function App() {
   const [URL, setURL] = useState([])
+  const [Data, setData] = useState([])
   let endpoint = "https://v2.jokeapi.dev/joke/Any"
   const fetchRandomBlogPost = () => {
     axios.get(endpoint)
       .then((response) => {
+        console.log(response);
         console.log(response.data.setup);
+        console.log(response.data.category);
         setURL(response.data.setup)
+        setData(response.data.category)
         console.log(URL);
       })
       .then((err) => {
@@ -31,6 +35,7 @@ function App() {
       </marquee>
       <div className="card mx-auto">
         <h4>
+        <p className='text-start underline underline-offset-4 font-medium text-lg p-5 shadow-lg rounded-lg text-xl font-bold text-white font-serif'>{Data}</p>
         <p className='text-center font-medium text-lg p-5 shadow-lg rounded-lg text-xl font-bold text-white font-serif'>{URL}</p>
         </h4>
       </div>
